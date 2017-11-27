@@ -18,7 +18,7 @@ int main(void) {
     int n, o;   // inner loop fins rocket
     int p, q;   // inner loop launch pad
     
-    // set max value
+    // set initial max value
     k = 20;
     o = 10;
 
