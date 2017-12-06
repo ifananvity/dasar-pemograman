@@ -10,35 +10,33 @@
 #include <stdlib.h>
 #include <conio.h>
 
-//Prototypes
-int power(base, exp);
-
-//Global var
-int base, exp;
-int result;
-
 int main(void) {
-	// ask user a number
+	//Declaration
+	int base, exp;
+	int result;
+
+	// prompt user
 	printf("base^exponent = result\n");
 	printf("Input base: ");
 	scanf("%d", &base);
 	printf("Input exponent: ");
 	scanf("%d", &exp);
 
-	// output answer
-    printf("\n%d^%d = %d\n", base, exp, power(base, exp));
+	// output problem
+	printf("\n%d^%d = ", base, exp);
 
-	// pause the console
-	printf("\nPress any key to exit . . .");getch();
-
-	return EXIT_SUCCESS;
-}
-
-int power(base, exp) {	
+	// calculate result
 	result = 1;
     while(exp) {   
         result *= base; 
         exp--; 
     }
-    return result;
+
+	// output answer
+    printf("%d\n", result);
+
+	// pause the console
+	printf("\nPress any key to exit . . .");getch();
+
+	return EXIT_SUCCESS;
 }

@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------------------
    Author	: Tifan Dwi Avianto (github.com/ifananvity)
    NIM		: A11.2017.10629 / A11.4113
-   Version	: 1.0 - 25/11/2017
-   Desc		: Menampilkan deretan bilangan faktor dari sebuah angka
+   Version	: 1.0 - 02/12/2017
+   Desc		: Output various triangular pattern
    ------------------------------------------------------------------------ */
 
 //Libraries
@@ -12,19 +12,27 @@
 
 int main(void) {
 	//Declaration
-	int n, i;
+	int i;     // outer loop
+	int limit; // outer loop limit
+	int j;     // inner loop
+	int k;     // inner loop limit
 
-	// ask a number
-    printf("Enter a positive integer: ");
-    scanf("%d",&n);
+	// prompt limit
+	printf("Input limit: ");
+	scanf("%d", &limit);
+	puts("");
 
-    // output answer
-    printf("Factors of %d are: ", n);
-    for(i=1; i <= n; i++) {
-        if (n % i == 0) {
-            printf("%d ", i);
-        }
-    }
+	// set initial value
+	k = 1;
+
+	// output
+	for (i = 1; i <= limit; i++) {
+		for (j = 1; j <= k; j++) {
+			printf("%d ", j);
+		}
+		k += 2;
+		printf("\n");
+	}
 
 	// pause the console
 	printf("\n\nPress any key to exit . . .");getch();

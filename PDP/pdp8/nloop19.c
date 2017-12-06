@@ -2,7 +2,7 @@
    Author   : Tifan Dwi Avianto ( github.com/ifananvity )
    NIM      : A11.2017.10629 / A11.4113
    Version  : 1.0 - 25/11/2017
-   Desc     : Prints out rocket & launch pad entirely from loop
+   Desc     : Prints out rocket & launch pad with loop
    ------------------------------------------------------------------------ */
 
 //Libraries
@@ -12,18 +12,21 @@
 
 int main(void) {
     //Declaration
-    int i;      // outer loop
+    int i;      // outer loops
     int j, k;   // inner loop head rocket
     int l, m;   // inner loop base rocket
     int n, o;   // inner loop fins rocket
     int p, q;   // inner loop launch pad
     
     // set initial max value
-    k = 20;
-    o = 10;
+    k = o = 20;
 
     // first line
-    printf("/]-[\\                     |\n");
+    printf("/]-[\\");
+    for (i = 0; i <= k; i++) {
+    	printf(" ");
+    }
+	printf("|\n");
 
     /* ---- 1ND LOOP (ROCKET) ----*/
     for (i = 1; i <= 36; i++) {
@@ -33,18 +36,18 @@ int main(void) {
             if (j == 1) {
                 printf("[]-[]");
             }
-
-            // output hook and blankspace
             if (i == 6) {
                 printf("=");
-            } else if (i == 7) {    // hook  
+            } else if (i == 7) {
+            	// output hook 
                 printf("=");
             } else {
-                printf(" ");        // blankspae
+            	//output blankspace
+                printf(" ");
             }
         }
 
-        // MIDDLE SECTION (rocket pattern)
+        // MIDDLE SECTION (the rocket pattern)
         for (l = 0; l <= m; l += 2) {
             // output outer layer / border "|"
             if (l == 0) {
@@ -70,7 +73,7 @@ int main(void) {
             }
 
             // output blankspace
-            //printf(" ");
+            printf(" ");
         }
 
         // newline
