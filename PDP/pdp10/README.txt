@@ -1,2 +1,1 @@
-.EXE SYSTEM REQUIREMENT:
-64 bit windows operating system
+64-bit operating system required!

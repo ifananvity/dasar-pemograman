@@ -13,10 +13,10 @@ Desc	: Input an array variables and search a number
 #include <conio.h>
 
 // Declarations
+float num[99];
+float find;
 int index;
-int num[99];
 int i;     // loop var
-int find;
 int flag;
 
 // Function prototypes
@@ -42,7 +42,7 @@ void input(int n) {
 	// input 3 values at a time
 	while (index < n) {
 		printf("Index [%d]: ", index);
-		scanf("%d", &num[index]);
+		scanf("%f", &num[index]);
 		index++;
 	}
 
@@ -57,10 +57,10 @@ void input(int n) {
 
 void search() {
 	printf("\nCari angka: ");
-	scanf("%d", &find);
+	scanf("%f", &find);
 	for (i = 0; i < index; i++) {
 		if (num[i] == find) {
-			printf("%d ditemukan di index ke-%d\n", find, i);
+			printf("%.1f ditemukan di index ke-%d\n", find, i);
 			flag = 1;
 		}	
 	}

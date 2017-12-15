@@ -14,7 +14,7 @@ Desc	: Input an output array variables
 
 // Declarations
 int index;
-int num[99];
+float num[99];
 int i;     // loop var
 
 // Function prototypes
@@ -40,7 +40,7 @@ void input(int n) {
 	// input 3 values at a time
 	while (index < n) {
 		printf("Index [%d]: ", index);
-		scanf("%d", &num[index]);
+		scanf("%f", &num[index]);
 		index++;
 	}
 
@@ -57,6 +57,6 @@ void output() {
 	// output all values that the user has entered
 	printf("\n");
 	for (i = 0; i < index; i++) {
-		printf("%d ", num[i]);	
+		printf("%.1f ", num[i]);	
 	}
 }
