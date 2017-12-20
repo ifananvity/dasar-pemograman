@@ -46,8 +46,8 @@ int main(void) {
 
 void initializeTable() {
     // generate random elements
-    for (int i = 0; i < NUM_ROWS; i++) {
-        for (int j = 0; j < NUM_COLS; j++) {
+    for (i = 0; i < NUM_ROWS; i++) {
+        for (j = 0; j < NUM_COLS; j++) {
             tableA[i][j] = rand() % 10;     // accept only number <10
             tableB[i][j] = rand() % 10;
         }
@@ -94,21 +94,17 @@ void chooseOperation() {
         }
         case '3' : {
             // multiplication
-            for (i = 0; i < NUM_ROWS; i++) {
-                for (j = 0; j < NUM_COLS; j++) {
-                    tableResult[i][j] = 0;
-                    for (i = 0; i < NUM_ROWS; i++) {     // row of first matrix
-                        for (j = 0; j < NUM_COLS; j++) {     // column of second matrix
-                            sum = 0;
-                            for (k = 0; k < NUM_COLS; k++) {
-                                sum = sum + tableA[i][k] * tableB[k][j];
-                            }
-                            tableResult[i][j] = sum;
-                        }
+            tableResult[i][j] = 0;
+            for (i = 0; i < NUM_ROWS; i++) {     // row of first matrix
+                for (j = 0; j < NUM_COLS; j++) {     // column of second matrix
+                    sum = 0;
+                    for (k = 0; k < NUM_COLS; k++) {
+                        sum = sum + tableA[i][k] * tableB[k][j];
                     }
+                    tableResult[i][j] = sum;
                 }
             }
-
+                
             printTable(tableResult);
             break;
         }

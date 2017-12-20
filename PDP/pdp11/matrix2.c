@@ -49,8 +49,8 @@ void askRowAndColumn() {
 
 void initializeTable() {
     // generate random elements
-    for (int i = 0; i < row1; i++) {
-        for (int j = 0; j < column1; j++) {
+    for (i = 0; i < row1; i++) {
+        for (j = 0; j < column1; j++) {
             tableA[i][j] = rand() % 10;     // accept only number <10
             tableB[i][j] = rand() % 10;
         }
