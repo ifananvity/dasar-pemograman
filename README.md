@@ -1,5 +1,5 @@
 # Programming Fundamentals
-Programming Fundamentals is a subject in Computer Science that I learn on my first semester. The subject go through whats common accross all languages, like loops, conditions, variables, memory, and pointer. Here are some of the programs that I write during my learning process.
+Programming Fundamentals is a subject in Computer Science that I learn on my first semester. The subject go through whats common accross all languages, like loops, conditions, variables, memory, and pointer. Here are some of the programs that I wrote during my learning process.
 
 ### References:
 * https://www.lynda.com/C-tutorials/C-Essential-Training/164457-2.html
